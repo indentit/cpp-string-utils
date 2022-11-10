@@ -9,7 +9,11 @@ namespace string_utils {
 
 		public:
 
-			std::vector<std::string> split(std::string in_str);
+			std::vector<std::string> split(std::string in_str, char split_char);
+			
+			std::vector<std::string> split(std::string in_str, const char *split_str);
+
+			void trim(std::string& str);
 	};
 
 }
