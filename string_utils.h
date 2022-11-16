@@ -14,6 +14,8 @@ namespace string_utils {
 			std::vector<std::string> split(std::string in_str, const char *split_str);
 
 			void trim(std::string& str);
+
+			int float2char(char* s, float value, int precision);
 	};
 
 }

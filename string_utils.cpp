@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <cstring>
 
 using namespace string_utils;
 
@@ -66,4 +67,27 @@ void StringUtils::trim(std::string& str)
 	str = str.substr(0, pos + 1);
 }
 
+
+
+int StringUtils::float2char(char* s, float value, int precision)
+{
+    int a = value;
+    int base = 1;
+
+    for (int i=0; i<precision; i++) {
+        base = base * 10;
+    }
+
+    int b = value * base;
+    int c = b-(a*base);
+
+    std::string str = std::to_string(a);
+    str += ".";
+    str += std::to_string(c);
+
+    std::strcpy(s, str.c_str());
+
+    
+    return 0;
+}
 
