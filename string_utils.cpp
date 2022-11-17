@@ -23,7 +23,7 @@ std::vector<std::string> StringUtils::split(std::string in_str, char split_char)
 			i = pos + 1;
 		} else {
 			if (last_pos < len) {
-				buffer.push_back(in_str.substr(last_pos, len - 1));
+				buffer.push_back(in_str.substr(last_pos, len));
 			}
 			i = len + 1;
 		}
@@ -49,7 +49,7 @@ std::vector<std::string> StringUtils::split(std::string in_str, const char *spli
 			i = pos + 1;
 		} else {
 			if (last_pos < len) {
-				buffer.push_back(in_str.substr(last_pos, len - 1));
+				buffer.push_back(in_str.substr(last_pos, len));
 			}
 			i = len + 1;
 		}
